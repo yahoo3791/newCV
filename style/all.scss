@@ -10,14 +10,6 @@ a {
   width: 0rem;
 }
 // reset style end
-// .bg {
-//   background-image: url('../images/phone_bg.png');
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//   @media (min-width: 768px) {
-// background-image: url('../images/ipad_bg.png');
-//   }
-// }
 body {
   overflow-x: hidden;
   background-image: -moz-linear-gradient(
@@ -52,7 +44,6 @@ body {
   }
 }
 .toggler {
-  //   border: 1px solid black;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -102,11 +93,28 @@ body {
   overflow: hidden;
   transform: rotate(-3deg);
   p {
-    // transform: translateX(101%);
-    animation: solgan 30s infinite;
-    @media (min-width: 768px) {
-      animation: solgan 50s infinite;
+    animation: move 60s linear infinite;
+    -webkit-animation: move 60s linear infinite;
+    @media (max-width: 768px) {
+      animation: move 30s linear infinite;
+      -webkit-animation: move 30s linear infinite;
     }
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(101%);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(101%);
+  }
+  100% {
+    -webkit-transform: translateX(-1000%);
   }
 }
 .btn-item {
