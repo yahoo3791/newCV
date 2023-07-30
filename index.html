@@ -16,17 +16,22 @@
         <div class="container">
             <div class="navbar">
                 <h1>ＰＲＯＦＯＬＩＯ</h1>
-                <div class="toggler">
+                <div class="toggler position-relative">
                     <span></span>
                     <span></span>
                     <span></span>
+                    <div class="toggler-open position-absolute">
+                        <a href="" class="d-inline-block px-5 py-3 utility-title">Resume</a>
+                        <a href="" class="d-inline-block px-5 py-3 utility-title">Projects</a>
+                        <a href="" class="d-inline-block px-5 py-3 utility-title">Contact</a>
+                    </div>
                 </div>
             </div>
             <div class="main my-5 d-flex justify-content-between">
                 <div class="content">
                     <h2 class="banner-title">Hello</h2>
                     <h3>About me</h3>
-                    <p class="letter-spacing-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, alias.
+                    <p class="letter-spacing-1">我是一位非本科系透過網路資源，自己學習前端網頁技術及知識的自學者。
                     </p>
                 </div>
                 <div class="pic">
@@ -145,8 +150,10 @@
             $('.toggler').toggleClass('active');
             if ($('.toggler').hasClass('active')) {
                 $('.toggler').removeClass('ori');
+                $('.toggler-open').addClass('active');
             } else {
                 $('.toggler').addClass('ori');
+                $('.toggler-open').removeClass('active');
             }
         })
     </script>
