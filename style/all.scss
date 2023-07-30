@@ -11,13 +11,14 @@ a {
 }
 // reset style end
 body {
+  touch-action: none;
+  pointer-events: none;
   overflow-x: hidden;
   background-image: -moz-linear-gradient(
     90deg,
     rgb(204, 255, 241),
     rgb(255, 214, 194)
   );
-
   background-image: -webkit-linear-gradient(
     90deg,
     rgb(204, 255, 241),
