@@ -34,6 +34,29 @@ body {
   height: 50px;
   cursor: pointer;
 }
+.toggler.ori span:first-child {
+  animation: togglerOriginal 1.2s;
+}
+.toggler.ori span:nth-child(2) {
+  animation: togglerOriginal2th 1.2s;
+}
+.toggler.ori span:nth-child(3) {
+  animation: togglerOriginal3th 1s;
+}
+.toggler.active span:first-child {
+  animation: togglerHover 0.7s;
+  animation-fill-mode: forwards;
+}
+.toggler.active span:nth-child(2) {
+  animation: togglerHover2th 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+}
+.toggler.active span:nth-child(3) {
+  animation: togglerHover3th 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
 .toggler span {
   display: block;
   height: 3px;
@@ -54,6 +77,70 @@ body {
   margin-left: auto;
 }
 
+@keyframes togglerOriginal {
+  0% {
+    width: 100%;
+    transform: translateY(15px) rotate(405deg);
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    margin-top: 10px;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes togglerOriginal2th {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes togglerOriginal3th {
+  0% {
+    width: 100%;
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+  100% {
+    margin-top: 10px;
+    transform: rotate(180deg);
+    width: 70%;
+  }
+}
+@keyframes togglerHover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    transform: translateY(15px) rotate(405deg);
+  }
+}
+@keyframes togglerHover2th {
+  0% {
+    width: 90%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes togglerHover3th {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+}
 .img-outer {
   width: 150px;
   height: 150px;

@@ -140,6 +140,16 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $('.toggler').click(function () {
+            $('.toggler').toggleClass('active');
+            if ($('.toggler').hasClass('active')) {
+                $('.toggler').removeClass('ori');
+            } else {
+                $('.toggler').addClass('ori');
+            }
+        })
+    </script>
 </body>
 
 </html>
