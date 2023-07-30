@@ -11,8 +11,6 @@ a {
 }
 // reset style end
 body {
-  touch-action: none;
-  pointer-events: none;
   overflow-x: hidden;
   background-image: -moz-linear-gradient(
     90deg,
@@ -218,6 +216,7 @@ body {
   letter-spacing: 0.5rem;
   overflow: hidden;
   transform: rotate(-3deg);
+  width: 105%;
   p {
     animation: move 60s linear infinite;
     -webkit-animation: move 60s linear infinite;

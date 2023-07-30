@@ -12,8 +12,6 @@ a {
 }
 
 body {
-  touch-action: none;
-  pointer-events: none;
   overflow-x: hidden;
   background-image: linear-gradient(90deg, rgb(204, 255, 241), rgb(255, 214, 194));
   background-size: 500%;
@@ -195,6 +193,7 @@ body {
   letter-spacing: 0.5rem;
   overflow: hidden;
   transform: rotate(-3deg);
+  width: 105%;
 }
 .solgan p {
   animation: move 60s linear infinite;
